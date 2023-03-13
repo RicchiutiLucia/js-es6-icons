@@ -152,7 +152,7 @@ selector.addEventListener('change', function(){
 //funzione che genera una sola box
 function generaBoxCode(icons){
     return `<div class="box">
-    <i class="${icons.family} ${icons.prefix}${icons.name} ${icons.color}"></i>
+    <i class="${icons.prefix}solid ${icons.prefix}${icons.name} ${icons.color}"></i>
     <div class="name">${icons.name}</div>
     </div>`
 }
