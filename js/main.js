@@ -132,6 +132,21 @@ const icons = [
 ];
 
 const container = document.getElementById("icons-container");
+const selector = document.getElementById("icons-selector");
+
+generaBoxesAll();
+
+selector.addEventListener('change', function(){
+    container.innerHTML = '';
+    if(selector.value == "all"){
+        generaBoxesAll();
+
+    }else{
+        filtroBoxesSelect();
+
+    }
+
+});
 
 
 //funzione che genera una sola box
@@ -142,11 +157,27 @@ function generaBoxCode(icons){
     </div>`
 }
 
-//Genera tutte le box
+//Funzione che Genera tutte le box
 function generaBoxesAll() {
 	icons.forEach((icons) => {
 		container.innerHTML += generaBoxCode(icons);
 	});
 };
 
-generaBoxesAll();
+
+
+//Funzione che filtra le box in base alla select
+function filtroBoxes(){
+    return icons.filter((box)=>{
+        return box.type == selector.value;
+
+    });
+}
+
+// Funzione che filtra le box in base alla select in cui si trova
+function filtroBoxesSelect(){
+    let boxes = filtroBoxes();
+    boxes.forEach((box)=>{
+        container.innerHTML += generaBoxCode(box);
+    });
+}
