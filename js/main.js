@@ -132,3 +132,21 @@ const icons = [
 ];
 
 const container = document.getElementById("icons-container");
+
+
+//funzione che genera una sola box
+function generaBoxCode(icons){
+    return `<div class="box">
+    <i class="${icons.family} ${icons.prefix}${icons.name} ${icons.color}"></i>
+    <div class="name">${icons.name}</div>
+    </div>`
+}
+
+//Genera tutte le box
+function generaBoxesAll() {
+	icons.forEach((icons) => {
+		container.innerHTML += generaBoxCode(icons);
+	});
+};
+
+generaBoxesAll();
