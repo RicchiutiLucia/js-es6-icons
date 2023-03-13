@@ -3,3 +3,44 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* Colori */
+.orange {
+    color: orange;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+/* Body e container */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#icons-container {
+    display: flex;
+}
+
+/* Box */
+.box {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box i {
+    font-size: 30px
+}
+
+.box .name {
+    font-size: 15px;
+    text-transform: uppercase;
+}
