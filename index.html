@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
 
+    <header>
+    </header>
+
     <main>
         <div class="container">
+            <div class="selector-container">
+                <div class="selector-text">Filtra per tipo</div>
+                <select name="icons-filter" id="icons-filter">
+                    <option value="all">All</option>
+                    <option value="animal">Animals</option>
+                    <option value="vegetable">Vegetables</option>
+                    <option value="user">Users</option>
+                </select>
+            </div>
+
             <div id="icons-container">
-               <!--
-                <div class="box">
-                    <i class="fas fa-cat blue"></i>
-                    <div class="name">Cat</div>
-                </div>
-               --> 
             </div>
         </div>
     </main>
